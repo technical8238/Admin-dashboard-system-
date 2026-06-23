@@ -1,0 +1,420 @@
+2026-05-03 13:29:35.021 +05:30 [WRN] The foreign key property 'OrderItem.ProductId1' was created in shadow state because a conflicting property with the simple name 'ProductId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-05-03 13:29:35.149 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-03 13:29:35.151 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-03 13:31:14.542 +05:30 [WRN] The foreign key property 'OrderItem.ProductId1' was created in shadow state because a conflicting property with the simple name 'ProductId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-05-03 13:31:14.627 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-03 13:31:14.629 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-03 13:31:16.406 +05:30 [INF] Executed DbCommand (119ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-05-03 13:31:16.431 +05:30 [INF] Acquiring an exclusive lock for migration application. See https://aka.ms/efcore-docs-migrations-lock for more information if this takes too long.
+2026-05-03 13:31:16.519 +05:30 [INF] Executed DbCommand (79ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+DECLARE @result int;
+EXEC @result = sp_getapplock @Resource = '__EFMigrationsLock', @LockOwner = 'Session', @LockMode = 'Exclusive';
+SELECT @result
+2026-05-03 13:31:16.679 +05:30 [INF] Executed DbCommand (20ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+IF OBJECT_ID(N'[__EFMigrationsHistory]') IS NULL
+BEGIN
+    CREATE TABLE [__EFMigrationsHistory] (
+        [MigrationId] nvarchar(150) NOT NULL,
+        [ProductVersion] nvarchar(32) NOT NULL,
+        CONSTRAINT [PK___EFMigrationsHistory] PRIMARY KEY ([MigrationId])
+    );
+END;
+2026-05-03 13:31:16.699 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-05-03 13:31:16.704 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-05-03 13:31:16.750 +05:30 [INF] Executed DbCommand (37ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-05-03 13:31:16.773 +05:30 [INF] Applying migration '20260503075941_AddImageUrlToProducts'.
+2026-05-03 13:31:16.900 +05:30 [ERR] Failed executing DbCommand (30ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+CREATE TABLE [AspNetRoles] (
+    [Id] nvarchar(450) NOT NULL,
+    [Name] nvarchar(256) NULL,
+    [NormalizedName] nvarchar(256) NULL,
+    [ConcurrencyStamp] nvarchar(max) NULL,
+    CONSTRAINT [PK_AspNetRoles] PRIMARY KEY ([Id])
+);
+2026-05-03 13:31:38.284 +05:30 [WRN] The foreign key property 'OrderItem.ProductId1' was created in shadow state because a conflicting property with the simple name 'ProductId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-05-03 13:31:38.392 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-03 13:31:38.396 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-03 13:31:45.477 +05:30 [INF] Executed DbCommand (26ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-05-03 13:31:45.520 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT OBJECT_ID(N'[__EFMigrationsHistory]');
+2026-05-03 13:31:45.553 +05:30 [INF] Executed DbCommand (16ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [MigrationId], [ProductVersion]
+FROM [__EFMigrationsHistory]
+ORDER BY [MigrationId];
+2026-05-03 13:36:34.433 +05:30 [INF] User profile is available. Using 'C:\Users\Admin\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2026-05-03 13:36:36.403 +05:30 [WRN] The foreign key property 'OrderItem.ProductId1' was created in shadow state because a conflicting property with the simple name 'ProductId' exists in the entity type, but is either not mapped, is already used for another relationship, or is incompatible with the associated primary key type. See https://aka.ms/efcore-relationships for information on mapping relationships in EF Core.
+2026-05-03 13:36:36.447 +05:30 [WRN] No store type was specified for the decimal property 'TotalAmount' on entity type 'Order'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-03 13:36:36.451 +05:30 [WRN] No store type was specified for the decimal property 'UnitPrice' on entity type 'OrderItem'. This will cause values to be silently truncated if they do not fit in the default precision and scale. Explicitly specify the SQL server column type that can accommodate all the values in 'OnModelCreating' using 'HasColumnType', specify precision and scale using 'HasPrecision', or configure a value converter using 'HasConversion'.
+2026-05-03 13:36:38.047 +05:30 [INF] Executed DbCommand (55ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2026-05-03 13:36:38.287 +05:30 [INF] Executed DbCommand (217ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND [o].[object_id] NOT IN (SELECT [ep].[major_id]
+        FROM [sys].[extended_properties] AS [ep]
+        WHERE [ep].[minor_id] = 0
+            AND [ep].[class] = 1
+            AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2026-05-03 13:36:39.022 +05:30 [INF] Executed DbCommand (155ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-05-03 13:36:39.167 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-05-03 13:36:39.173 +05:30 [INF] Executed DbCommand (1ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-05-03 13:36:39.205 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedDate], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsActive], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-05-03 13:36:39.309 +05:30 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Categories] AS [c]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-03 13:36:39.328 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Products] AS [p]) THEN CAST(1 AS bit)
+    ELSE CAST(0 AS bit)
+END
+2026-05-03 13:36:41.619 +05:30 [INF] Now listening on: http://localhost:5100
+2026-05-03 13:36:41.634 +05:30 [INF] Application started. Press Ctrl+C to shut down.
+2026-05-03 13:36:41.636 +05:30 [INF] Hosting environment: Development
+2026-05-03 13:36:41.639 +05:30 [INF] Content root path: C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System
+2026-05-03 13:36:59.590 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/ - null null
+2026-05-03 13:36:59.602 +05:30 [WRN] Failed to determine the https port for redirect.
+2026-05-03 13:36:59.689 +05:30 [INF] Executing endpoint 'Admin_Dashboard_System.Controllers.HomeController.Index (Admin Dashboard System)'
+2026-05-03 13:36:59.704 +05:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Admin_Dashboard_System.Controllers.HomeController (Admin Dashboard System).
+2026-05-03 13:36:59.727 +05:30 [INF] Executing RedirectResult, redirecting to /Account/Login.
+2026-05-03 13:36:59.732 +05:30 [INF] Executed action Admin_Dashboard_System.Controllers.HomeController.Index (Admin Dashboard System) in 21.8178ms
+2026-05-03 13:36:59.735 +05:30 [INF] Executed endpoint 'Admin_Dashboard_System.Controllers.HomeController.Index (Admin Dashboard System)'
+2026-05-03 13:36:59.738 +05:30 [INF] HTTP GET / responded 302 in 137.5711 ms
+2026-05-03 13:36:59.748 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/ - 302 0 null 162.1404ms
+2026-05-03 13:36:59.757 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/Account/Login - null null
+2026-05-03 13:36:59.765 +05:30 [INF] Executing endpoint 'Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System)'
+2026-05-03 13:36:59.770 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Admin_Dashboard_System.Controllers.AccountController (Admin Dashboard System).
+2026-05-03 13:36:59.815 +05:30 [INF] Executing ViewResult, running view Login.
+2026-05-03 13:36:59.959 +05:30 [INF] Executed ViewResult - view Login executed in 148.8336ms.
+2026-05-03 13:36:59.962 +05:30 [INF] Executed action Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System) in 189.1353ms
+2026-05-03 13:36:59.963 +05:30 [INF] Executed endpoint 'Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System)'
+2026-05-03 13:36:59.964 +05:30 [INF] HTTP GET /Account/Login responded 200 in 205.3690 ms
+2026-05-03 13:36:59.971 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/Account/Login - 200 null text/html; charset=utf-8 214.2823ms
+2026-05-03 13:36:59.990 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - null null
+2026-05-03 13:36:59.992 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-05-03 13:37:00.017 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\css\site.css'
+2026-05-03 13:37:00.071 +05:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2026-05-03 13:37:00.110 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/js/site.js?v=viSJR-rBG3td9a5GNAzMGZes5A6FCYZONeFBjSRpo_U - null null
+2026-05-03 13:37:00.117 +05:30 [INF] HTTP GET /css/site.css responded 200 in 123.4053 ms
+2026-05-03 13:37:00.119 +05:30 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 123.4128 ms
+2026-05-03 13:37:00.126 +05:30 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\js\site.js'
+2026-05-03 13:37:00.127 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - 200 667 text/css 136.8893ms
+2026-05-03 13:37:00.132 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/bootstrap/dist/css/bootstrap.min.css - 200 232803 text/css 140.0964ms
+2026-05-03 13:37:00.139 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - null null
+2026-05-03 13:37:00.144 +05:30 [INF] HTTP GET /js/site.js responded 200 in 20.3207 ms
+2026-05-03 13:37:00.148 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/jquery/dist/jquery.min.js - null null
+2026-05-03 13:37:00.151 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-05-03 13:37:00.161 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/js/site.js?v=viSJR-rBG3td9a5GNAzMGZes5A6FCYZONeFBjSRpo_U - 200 206 text/javascript 50.1278ms
+2026-05-03 13:37:00.162 +05:30 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js'
+2026-05-03 13:37:00.168 +05:30 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\jquery\dist\jquery.min.js'
+2026-05-03 13:37:00.180 +05:30 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 16.6194 ms
+2026-05-03 13:37:00.177 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-05-03 13:37:00.179 +05:30 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 25.3695 ms
+2026-05-03 13:37:00.235 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - 200 5824 text/javascript 95.8952ms
+2026-05-03 13:37:00.184 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/jquery/dist/jquery.min.js - 200 87533 text/javascript 35.7839ms
+2026-05-03 13:37:00.208 +05:30 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2026-05-03 13:37:00.176 +05:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2026-05-03 13:37:00.258 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/favicon.ico - null null
+2026-05-03 13:37:00.260 +05:30 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 65.5084 ms
+2026-05-03 13:37:00.261 +05:30 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 93.1622 ms
+2026-05-03 13:37:00.267 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80721 text/javascript 116.5942ms
+2026-05-03 13:37:00.266 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/jquery-validation/dist/jquery.validate.min.js - 200 25308 text/javascript 88.9181ms
+2026-05-03 13:37:00.265 +05:30 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\favicon.ico'
+2026-05-03 13:37:00.279 +05:30 [INF] HTTP GET /favicon.ico responded 200 in 15.5739 ms
+2026-05-03 13:37:00.282 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/favicon.ico - 200 5430 image/x-icon 24.1348ms
+2026-05-03 13:37:13.362 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/ - null null
+2026-05-03 13:37:13.468 +05:30 [INF] Executing endpoint 'Admin_Dashboard_System.Controllers.HomeController.Index (Admin Dashboard System)'
+2026-05-03 13:37:13.474 +05:30 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller Admin_Dashboard_System.Controllers.HomeController (Admin Dashboard System).
+2026-05-03 13:37:13.479 +05:30 [INF] Executing RedirectResult, redirecting to /Account/Login.
+2026-05-03 13:37:13.481 +05:30 [INF] Executed action Admin_Dashboard_System.Controllers.HomeController.Index (Admin Dashboard System) in 3.0328ms
+2026-05-03 13:37:13.484 +05:30 [INF] Executed endpoint 'Admin_Dashboard_System.Controllers.HomeController.Index (Admin Dashboard System)'
+2026-05-03 13:37:13.489 +05:30 [INF] HTTP GET / responded 302 in 74.1696 ms
+2026-05-03 13:37:13.493 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/ - 302 0 null 130.4952ms
+2026-05-03 13:37:13.506 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/Account/Login - null null
+2026-05-03 13:37:13.519 +05:30 [INF] Executing endpoint 'Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System)'
+2026-05-03 13:37:13.521 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login() on controller Admin_Dashboard_System.Controllers.AccountController (Admin Dashboard System).
+2026-05-03 13:37:13.841 +05:30 [INF] Executing ViewResult, running view Login.
+2026-05-03 13:37:13.872 +05:30 [INF] Executed ViewResult - view Login executed in 31.3252ms.
+2026-05-03 13:37:13.875 +05:30 [INF] Executed action Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System) in 349.4711ms
+2026-05-03 13:37:13.878 +05:30 [INF] Executed endpoint 'Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System)'
+2026-05-03 13:37:13.881 +05:30 [INF] HTTP GET /Account/Login responded 200 in 369.8867 ms
+2026-05-03 13:37:13.883 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/Account/Login - 200 null text/html; charset=utf-8 377.401ms
+2026-05-03 13:37:13.988 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/bootstrap/dist/css/bootstrap.min.css - null null
+2026-05-03 13:37:13.994 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - null null
+2026-05-03 13:37:14.010 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/jquery-validation/dist/jquery.validate.min.js - null null
+2026-05-03 13:37:14.010 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/js/site.js?v=viSJR-rBG3td9a5GNAzMGZes5A6FCYZONeFBjSRpo_U - null null
+2026-05-03 13:37:14.010 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/bootstrap/dist/js/bootstrap.bundle.min.js - null null
+2026-05-03 13:37:14.013 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/jquery/dist/jquery.min.js - null null
+2026-05-03 13:37:14.015 +05:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/css/bootstrap.min.css'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css'
+2026-05-03 13:37:14.023 +05:30 [INF] Sending file. Request path: '/css/site.css'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\css\site.css'
+2026-05-03 13:37:14.046 +05:30 [INF] Sending file. Request path: '/lib/jquery-validation/dist/jquery.validate.min.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js'
+2026-05-03 13:37:14.048 +05:30 [INF] Sending file. Request path: '/js/site.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\js\site.js'
+2026-05-03 13:37:14.062 +05:30 [INF] Sending file. Request path: '/lib/bootstrap/dist/js/bootstrap.bundle.min.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.min.js'
+2026-05-03 13:37:14.071 +05:30 [INF] Sending file. Request path: '/lib/jquery/dist/jquery.min.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\jquery\dist\jquery.min.js'
+2026-05-03 13:37:14.074 +05:30 [INF] HTTP GET /lib/bootstrap/dist/css/bootstrap.min.css responded 200 in 71.8376 ms
+2026-05-03 13:37:14.078 +05:30 [INF] HTTP GET /css/site.css responded 200 in 58.1447 ms
+2026-05-03 13:37:14.081 +05:30 [INF] HTTP GET /lib/jquery-validation/dist/jquery.validate.min.js responded 200 in 37.6555 ms
+2026-05-03 13:37:14.086 +05:30 [INF] HTTP GET /js/site.js responded 200 in 40.6899 ms
+2026-05-03 13:37:14.089 +05:30 [INF] HTTP GET /lib/bootstrap/dist/js/bootstrap.bundle.min.js responded 200 in 28.9057 ms
+2026-05-03 13:37:14.091 +05:30 [INF] HTTP GET /lib/jquery/dist/jquery.min.js responded 200 in 27.2251 ms
+2026-05-03 13:37:14.096 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/bootstrap/dist/css/bootstrap.min.css - 200 232803 text/css 107.7073ms
+2026-05-03 13:37:14.102 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/css/site.css?v=j6fhJSuuyLpOSLuPJU0TsDV0iNjor5S3rDnvxJrt4bg - 200 667 text/css 107.6882ms
+2026-05-03 13:37:14.105 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/jquery-validation/dist/jquery.validate.min.js - 200 25308 text/javascript 95.3306ms
+2026-05-03 13:37:14.111 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/js/site.js?v=viSJR-rBG3td9a5GNAzMGZes5A6FCYZONeFBjSRpo_U - 200 206 text/javascript 100.8102ms
+2026-05-03 13:37:14.153 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/bootstrap/dist/js/bootstrap.bundle.min.js - 200 80721 text/javascript 142.322ms
+2026-05-03 13:37:14.158 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/jquery/dist/jquery.min.js - 200 87533 text/javascript 145.1881ms
+2026-05-03 13:37:14.165 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - null null
+2026-05-03 13:37:14.213 +05:30 [INF] Sending file. Request path: '/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\lib\jquery-validation-unobtrusive\dist\jquery.validate.unobtrusive.min.js'
+2026-05-03 13:37:14.216 +05:30 [INF] HTTP GET /lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js responded 200 in 5.7024 ms
+2026-05-03 13:37:14.230 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/lib/jquery-validation-unobtrusive/dist/jquery.validate.unobtrusive.min.js - 200 5824 text/javascript 65.3214ms
+2026-05-03 13:37:14.324 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/favicon.ico - null null
+2026-05-03 13:37:14.344 +05:30 [INF] Sending file. Request path: '/favicon.ico'. Physical path: 'C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\wwwroot\favicon.ico'
+2026-05-03 13:37:14.350 +05:30 [INF] HTTP GET /favicon.ico responded 200 in 9.2697 ms
+2026-05-03 13:37:14.412 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/favicon.ico - 200 5430 image/x-icon 88.0894ms
+2026-05-03 13:37:46.736 +05:30 [INF] Request starting HTTP/1.1 POST http://localhost:5100/Account/Login - application/x-www-form-urlencoded 246
+2026-05-03 13:37:46.753 +05:30 [INF] Executing endpoint 'Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System)'
+2026-05-03 13:37:46.820 +05:30 [INF] Route matched with {action = "Login", controller = "Account"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Login(Admin_Dashboard_System.Controllers.LoginViewModel) on controller Admin_Dashboard_System.Controllers.AccountController (Admin Dashboard System).
+2026-05-03 13:37:47.023 +05:30 [INF] Executed DbCommand (18ms) [Parameters=[@normalizedUserName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedDate], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsActive], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedUserName] = @normalizedUserName
+2026-05-03 13:37:47.598 +05:30 [INF] Executed DbCommand (10ms) [Parameters=[@user_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[Id], [a].[ClaimType], [a].[ClaimValue], [a].[UserId]
+FROM [AspNetUserClaims] AS [a]
+WHERE [a].[UserId] = @user_Id
+2026-05-03 13:37:47.736 +05:30 [INF] Executed DbCommand (21ms) [Parameters=[@userId='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a0].[Name]
+FROM [AspNetUserRoles] AS [a]
+INNER JOIN [AspNetRoles] AS [a0] ON [a].[RoleId] = [a0].[Id]
+WHERE [a].[UserId] = @userId
+2026-05-03 13:37:47.770 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@normalizedName='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[Id], [a].[ConcurrencyStamp], [a].[Name], [a].[NormalizedName]
+FROM [AspNetRoles] AS [a]
+WHERE [a].[NormalizedName] = @normalizedName
+2026-05-03 13:37:47.811 +05:30 [INF] Executed DbCommand (12ms) [Parameters=[@role_Id='?' (Size = 450)], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ClaimType], [a].[ClaimValue]
+FROM [AspNetRoleClaims] AS [a]
+WHERE [a].[RoleId] = @role_Id
+2026-05-03 13:37:47.840 +05:30 [INF] AuthenticationScheme: Identity.Application signed in.
+2026-05-03 13:37:47.859 +05:30 [INF] Executed DbCommand (9ms) [Parameters=[@normalizedEmail='?' (Size = 256)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(2) [a].[Id], [a].[AccessFailedCount], [a].[ConcurrencyStamp], [a].[CreatedDate], [a].[Email], [a].[EmailConfirmed], [a].[FirstName], [a].[IsActive], [a].[LastName], [a].[LockoutEnabled], [a].[LockoutEnd], [a].[NormalizedEmail], [a].[NormalizedUserName], [a].[PasswordHash], [a].[PhoneNumber], [a].[PhoneNumberConfirmed], [a].[SecurityStamp], [a].[TwoFactorEnabled], [a].[UserName]
+FROM [AspNetUsers] AS [a]
+WHERE [a].[NormalizedEmail] = @normalizedEmail
+2026-05-03 13:37:48.595 +05:30 [ERR] Failed executing DbCommand (54ms) [Parameters=[@p0='?' (Size = 50), @p1='?' (DbType = DateTime2), @p2='?' (Size = 500), @p3='?' (DbType = Int32), @p4='?' (Size = 100), @p5='?' (Size = 100), @p6='?' (Size = 50)], CommandType='"Text"', CommandTimeout='30']
+SET IMPLICIT_TRANSACTIONS OFF;
+SET NOCOUNT ON;
+INSERT INTO [AuditLogs] ([Action], [CreatedDate], [Description], [EntityId], [EntityType], [IpAddress], [UserName])
+OUTPUT INSERTED.[Id]
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6);
+2026-05-03 13:37:48.708 +05:30 [ERR] An exception occurred in the database while saving changes for context type 'Admin_Dashboard_System.Data.ApplicationDbContext'.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AuditLogs'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:7808b8d1-ab4b-40f0-83de-e4a251d4c022
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid object name 'AuditLogs'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:7808b8d1-ab4b-40f0-83de-e4a251d4c022
+Error Number:208,State:1,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Update.Internal.SqlServerModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalDatabase.SaveChangesAsync(IList`1 entries, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2026-05-03 13:37:48.751 +05:30 [INF] Executing RedirectResult, redirecting to /Dashboard.
+2026-05-03 13:37:48.761 +05:30 [INF] Executed action Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System) in 1934.9011ms
+2026-05-03 13:37:48.770 +05:30 [INF] Executed endpoint 'Admin_Dashboard_System.Controllers.AccountController.Login (Admin Dashboard System)'
+2026-05-03 13:37:48.782 +05:30 [INF] HTTP POST /Account/Login responded 302 in 2036.0516 ms
+2026-05-03 13:37:48.797 +05:30 [INF] Request finished HTTP/1.1 POST http://localhost:5100/Account/Login - 302 0 null 2061.2947ms
+2026-05-03 13:37:48.809 +05:30 [INF] Request starting HTTP/1.1 GET http://localhost:5100/Dashboard - null null
+2026-05-03 13:37:48.844 +05:30 [INF] Executing endpoint 'Admin_Dashboard_System.Controllers.DashboardController.Index (Admin Dashboard System)'
+2026-05-03 13:37:48.869 +05:30 [INF] Route matched with {action = "Index", controller = "Dashboard"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Index() on controller Admin_Dashboard_System.Controllers.DashboardController (Admin Dashboard System).
+2026-05-03 13:37:48.928 +05:30 [ERR] Failed executing DbCommand (12ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [p].[Id], [p].[CategoryId], [p].[CreatedDate], [p].[Description], [p].[ImageUrl], [p].[IsActive], [p].[Name], [p].[Price], [p].[StockQuantity]
+FROM [Products] AS [p]
+2026-05-03 13:37:48.942 +05:30 [ERR] An exception occurred while iterating over the results of a query for context type 'Admin_Dashboard_System.Data.ApplicationDbContext'.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ImageUrl'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:7808b8d1-ab4b-40f0-83de-e4a251d4c022
+Error Number:207,State:1,Class:16
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ImageUrl'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+ClientConnectionId:7808b8d1-ab4b-40f0-83de-e4a251d4c022
+Error Number:207,State:1,Class:16
+2026-05-03 13:37:48.965 +05:30 [INF] Executed action Admin_Dashboard_System.Controllers.DashboardController.Index (Admin Dashboard System) in 89.2218ms
+2026-05-03 13:37:48.968 +05:30 [INF] Executed endpoint 'Admin_Dashboard_System.Controllers.DashboardController.Index (Admin Dashboard System)'
+2026-05-03 13:37:48.971 +05:30 [ERR] HTTP GET /Dashboard responded 500 in 152.9092 ms
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ImageUrl'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Admin_Dashboard_System.Repositories.Repository`1.GetAllAsync() in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Repositories\Repository.cs:line 25
+   at Admin_Dashboard_System.Services.DashboardService.GetDashboardDataAsync() in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Services\DashboardService.cs:line 28
+   at Admin_Dashboard_System.Controllers.DashboardController.Index() in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Controllers\DashboardController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Program.cs:line 141
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Admin_Dashboard_System.Middleware.RateLimitMiddleware.InvokeAsync(HttpContext context) in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Middleware\RateLimitMiddleware.cs:line 54
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+ClientConnectionId:7808b8d1-ab4b-40f0-83de-e4a251d4c022
+Error Number:207,State:1,Class:16
+2026-05-03 13:37:49.031 +05:30 [ERR] An unhandled exception has occurred while executing the request.
+Microsoft.Data.SqlClient.SqlException (0x80131904): Invalid column name 'ImageUrl'.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__195_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ToListAsync[TSource](IQueryable`1 source, CancellationToken cancellationToken)
+   at Admin_Dashboard_System.Repositories.Repository`1.GetAllAsync() in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Repositories\Repository.cs:line 25
+   at Admin_Dashboard_System.Services.DashboardService.GetDashboardDataAsync() in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Services\DashboardService.cs:line 28
+   at Admin_Dashboard_System.Controllers.DashboardController.Index() in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Controllers\DashboardController.cs:line 20
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeNextResourceFilter>g__Awaited|25_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Rethrow(ResourceExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_3>d.MoveNext() in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Program.cs:line 141
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Admin_Dashboard_System.Middleware.RateLimitMiddleware.InvokeAsync(HttpContext context) in C:\Users\Admin\OneDrive\Desktop\projects\Admin Dashboard System\Admin Dashboard System\Middleware\RateLimitMiddleware.cs:line 54
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+ClientConnectionId:7808b8d1-ab4b-40f0-83de-e4a251d4c022
+Error Number:207,State:1,Class:16
+2026-05-03 13:37:49.149 +05:30 [INF] Request finished HTTP/1.1 GET http://localhost:5100/Dashboard - 500 null text/html; charset=utf-8 339.1933ms

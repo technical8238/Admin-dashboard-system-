@@ -1,0 +1,15 @@
+# Ignore Visual Studio and build artifacts
+.vs/
+.vscode/
+bin/
+obj/
+*.user
+*.suo
+
+# Ignore agent/debug files that cause indexing errors
+.agent.md
+.agent.md.bak
+
+# OS files
+Thumbs.db
+.DS_Store

@@ -1,0 +1,84 @@
+@model Admin_Dashboard_System.ViewModels.ShoppingCartViewModel
+@{
+    ViewData["Title"] = "Shopping Cart";
+    Layout = "_AdminLayout";
+}
+
+<div class="container mt-4">
+    <h2>Shopping Cart</h2>
+    
+    @if (!Model.Items.Any())
+    {
+        <div class="alert alert-info">
+            Your cart is empty. <a asp-controller="Products" asp-action="Index">Browse products</a> to add items.
+        </div>
+    }
+    else
+    {
+        <div class="row">
+            <div class="col-md-8">
+                @foreach (var item in Model.Items)
+                {
+                    <div class="card mb-3">
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-md-2">
+                                    @if (!string.IsNullOrEmpty(item.ImageUrl))
+                                    {
+                                        <img src="@item.ImageUrl" alt="@item.ProductName" class="img-fluid rounded" />
+                                    }
+                                    else
+                                    {
+                                        <div class="bg-light text-center rounded" style="height: 100px; line-height: 100px;">No Image</div>
+                                    }
+                                </div>
+                                <div class="col-md-6">
+                                    <h5>@item.ProductName</h5>
+                                    <p class="text-muted mb-1">@item.ProductDescription</p>
+                                    <p class="text-primary fw-bold">$@item.Price.ToString("0.00")</p>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="d-flex align-items-center mb-2">
+                                        <label class="me-2">Quantity:</label>
+                                        <form asp-action="UpdateQuantity" method="post" class="d-flex">
+                                            @Html.AntiForgeryToken()
+                                            <input type="hidden" name="productId" value="@item.ProductId" />
+                                            <input type="number" name="quantity" value="@item.Quantity" min="1" max="100" class="form-control form-control-sm" style="width: 80px;" />
+                                            <button type="submit" class="btn btn-sm btn-primary ms-2">Update</button>
+                                        </form>
+                                    </div>
+                                    <p class="text-muted">Subtotal: $@item.Subtotal.ToString("0.00")</p>
+                                    <form asp-action="RemoveFromCart" method="post" class="mt-2">
+                                        @Html.AntiForgeryToken()
+                                        <input type="hidden" name="productId" value="@item.ProductId" />
+                                        <button type="submit" class="btn btn-sm btn-danger">Remove</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                }
+            </div>
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="mb-0">Order Summary</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between mb-2">
+                            <span>Total Items:</span>
+                            <span>@Model.TotalItems</span>
+                        </div>
+                        <hr />
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="fw-bold">Total Amount:</span>
+                            <span class="fw-bold text-primary">$@Model.TotalAmount.ToString("0.00")</span>
+                        </div>
+                        <a asp-action="Checkout" class="btn btn-success w-100">Proceed to Checkout</a>
+                        <a asp-controller="Products" asp-action="Index" class="btn btn-outline-secondary w-100 mt-2">Continue Shopping</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
