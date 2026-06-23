@@ -272,3 +272,8 @@ For issues or questions, please refer to the code comments or ASP.NET Core docum
 ---
 
 **Built with ❤️ using ASP.NET Core 8.0**
+
+## Release v0.1.0
+
+- Initial public release: project scaffold, core features, and sample data.
+- See the repository for full source and usage instructions.
